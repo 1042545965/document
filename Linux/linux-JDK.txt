@@ -1,0 +1,15 @@
+安装jdk指令
+	查看Centos是否安装JDK
+		rpm -ivh jdk-8u131-linux-x64.rpm
+	linux安装jdk jdk1.8.0_131（1.8的rpm安装，jdk自行去官网下载）
+		rpm -ivh jdk-8u25-linux-x64.rpm
+		vi /etc/profile //开始配置环境变量
+		JAVA_HOME=/usr/java/jdk1.8.0_131/  这里是运行完rpm之后生成了usr/java/ 的文件夹
+		PATH=$JAVA_HOME/bin:$PATH
+		CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+		export JAVA_HOME
+		export PATH
+		export CLASSPATH
+		source /etc/profile //运行环境变量的文件，是jdk环境生效
+		java -version  查看版本  javac 查看安装是否成功
+		

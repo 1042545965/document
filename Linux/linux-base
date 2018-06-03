@@ -1,0 +1,31 @@
+linux 基础指令
+	计算机指令：
+		1、reboot   普通重启
+		2、shutdown -r now 立刻重启(root用户使用)
+		3、shutdown -r 10 过10分钟自动重启(root用户使用)
+		4、shutdown -r 20:35 在时间为20:35时候重启(root用户使用)
+	linux基础文件配置概念
+		etc目录存放系统配置文件
+		usr存放共享资源，比如自己安装的mysql ，djk ，tomca
+	安装gcc以及其他基础包
+		  yum -y install gcc
+		  yum -y install gcc-c++   
+		  yum -y install wget 
+		  yum install vim-enhanced
+		  yum install -y unzip
+		  yum -y install xz  //也是一种压缩格式 node.js里有
+	Linux防火墙
+		chkconfig iptables on  开启防火墙(重启后永久生效)
+		chkconfig iptables off 关闭防火墙(重启后永久生效)
+		service iptables start 开启防火墙(即时生效，重启后失效)
+		service iptables stop 关闭防火墙(即时生效，重启后失效)
+		service iptables restartd 重启防火墙
+	linux 开放端口
+		vi /etc/sysconfig/iptables 
+		-A INPUT -m state --state NEW -m tcp -p tcp --dport 23000（需要添加的端口号） -j ACCEPT
+		service iptables restart 修改完保存退出，重启网卡服务
+		service iptables status 查看端口开放信息
+	linux虚拟机设置网卡
+		vi/etc/sysconfig/network-scripts/ifcfg-eth0  修改 ONBOOT=yes
+		service network restart  然后重启网络服务
+		

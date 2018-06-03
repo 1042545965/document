@@ -1,0 +1,17 @@
+netty学习笔记
+Netty和Tomcat最大的区别就在于通信协议，Tomcat是基于Http协议的，他的实质是一个基于http协议的web容器
+netty他能通过编程自定义各种协议，因为netty能够通过codec自己来编码/解码字节流
+netty使用了nio中的零拷贝的功能
+request请求的组成部分
+     ①:HTTP response:请求头的信息
+     ②:HTTP contents:包含的是请求的数据，后续可以有多个contents
+     ③:Last HTTP contents 标记着httpresponse的结束 
+
+netty 每次会话都会建立一个channel 每一个channellnboundHander一般是不会去处理多个channel的。
+netty处理channel的时候只处理fullhttprequest的 channel
+
+netty的四个核心
+	channel:客户端与服务端的通信的通道
+	ChannelHander 业务处理器（in 和  out）
+	ChannelPipeline 用于存放ChannelHander 的容器 
+	ChannelContext通信管道的上下文
