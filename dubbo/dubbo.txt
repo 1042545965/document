@@ -1,0 +1,33 @@
+服务架构的演变
+	传统的mvc垂直架构
+		缺点：
+			项目越来越大，问题越来越多。一有问题就得重新打包
+			维护困难，上线时间变长
+	RPC架构(Remote procedure Call Protocol),http短链接，httpcleant
+		技术点：
+			进行垂直拆分
+				垂直拆分后就需要sso单点登陆
+			远程代理对象
+			序列化
+		缺点：
+			没有服务治理中心
+	SOA 在RPC上加了一个服务治理中心
+	微服务架构
+
+dubbo  process 动图制作网页
+	consumer：消费者  这几个之间的调用只有消费者和生成者之间是同步的
+	provide：生产者
+	register：注册中心
+	monitor：监控
+	为什么要用rpc
+使用zookeeper有什么好处
+	dubbo在zk下的存储目录/dubbo/接口包名/consumers
+		[consumers, routers, providers, configurators]这四个目录
+				providers：
+				consumers：都有一串url，是一串具体的版本，地址等各种信息
+dubbo与netty
+		netty处在dubbo目录结构 com.alibaba.dubbo.remoting.transport.netty 
+			像连接的时候在控制台打印的连接信息就是netty打印的
+		nio一个很重要的点是selector
+		nio的多线程如何实现:
+			跑成多线程，每一个线程要有一个selector ，不然会空指针异常

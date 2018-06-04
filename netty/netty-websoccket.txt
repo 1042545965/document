@@ -78,4 +78,8 @@ websocket
 	websocket关闭连接
 		服务器底层关闭tcp连接（正常情况下，应该先是服务器来关闭）
 		客户端发起tcp close
-		
+netty实现nio多线程
+	在openselector方法中启动selector，使每个线程有一个selector
+	多线程知识点
+		在同一个main方法当中时   thread.star()//一个子线程运行的
+						 thread.run()//一个主线程运行的
