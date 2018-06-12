@@ -31,3 +31,24 @@ dubbo与netty
 		nio一个很重要的点是selector
 		nio的多线程如何实现:
 			跑成多线程，每一个线程要有一个selector ，不然会空指针异常
+		work线程处理SocketChannel
+		
+netty 基于nio	
+	netty不能用传统的线程池来处理
+	niowork
+dubbo RPC 远程服务调用协议（只要是夸进程的调用就叫RPC调用）当client调用server的时候就是使用tcp/ip传输的，这时候就用到了socket
+	方法示例
+		restAPI也是RPC调用，socket不是RPC协议调用
+	实现rpc的项目有
+		rmi  springcloud
+	RPC理解
+		RPC实现就是等于一个非透明的RPC调用（透明性由RPC去调用）
+	dubbo 的报文格式
+		head：
+			标志位（请求，响应，事件）
+			status：成功还是失败
+		requestbody：版本号，接口路径，接口版本，方法名称，参数类型，参数值
+		responsebody：结果标识（同样是java，最好使用错误堆栈返回）
+	通过注册中心消费者能获取导序列化的情况，其实还有很多其他的东西	
+			
+		

@@ -1,0 +1,11 @@
+VUE
+	MVVM模式
+		M 	model模型,当前的可用数据
+		V view渲染的UI HTML
+		VM 
+		HTML 扩展标签
+		双向数据绑定,数据能够直接同步起来v-model 用与表单
+		v-for 数据遍历
+		v-on //用来执行事件的 可以用@来简写
+		v-show / v-if
+		v-bind 事件绑定

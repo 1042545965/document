@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="./resource/vue.js"></script>
+<script type="text/javascript">
+	window.onload = function (){
+		new Vue ({
+			el : '#ismy',
+			data : {
+				msg : 'hello word',
+				name : 'dkz',
+				obj : [
+					{name:'dkz' , age:'25'},
+					{name:'chb' , age:'23'},
+					{name:'nzj' , age:'24'}
+				] ,
+				flag : false , 
+				success : true ,
+				values : 'b',
+				selectd : '24'
+			},
+		
+			methods : {
+				action : function(){
+					alert("dkzaaa");
+					this.msg = 'dkz hello word'
+				}
+			}
+		
+		});
+	}
+
+</script>
+<body>
+	<div id="ismy" >
+	<input v-model="msg">
+		{{msg}} , {{name}}
+		<ul>
+			<li v-for="item in obj">{{item.name}},{{item.age}}</li>
+		</ul>
+		<button v-on:click="action">点我</button>
+		<button @click="action">点我02</button>
+		<button v-show="flag">点我</button>
+		<button v-if="flag">{{msg}}</button>
+		<button v-else-if = "success">{{name}}===00</button><!--else-if 要和if放一起  -->
+		<button v-else>{{name}}</button>
+		
+		<input v-bind:disabled="values == 'a'" v-model="values" >
+		<input type="checkbox" v-model="flag">{{flag}}
+		
+		<select v-model="selectd">
+			<option v-for="item in obj" v-bind:value="item.age">{{item.name}}</option>
+		</select>
+	</div>
+</body>
+</html>
