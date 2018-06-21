@@ -1,0 +1,14 @@
+今天完成了对spring做的动态数据源的控制，对其aop有了进一步的认识
+	1：找准切入点
+	2：切面
+	3：连接点
+	4：不修改代码的前提下将需要运行的类引入横切关注点
+	需要单独下载的两个jar
+		aopalliance.jar
+ 		aspectjweaver.jar 
+ 	单纯的实现aop的话，使用动态代理
+ 	前置通知
+ 	后置通知
+ 	异常通知
+ 	环绕通知
+ 		https://www.cnblogs.com/hongwz/p/5764917.html 个人感觉对aop介绍的比较到位的一篇博客
