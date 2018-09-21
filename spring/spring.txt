@@ -12,3 +12,5 @@
  	异常通知
  	环绕通知
  		https://www.cnblogs.com/hongwz/p/5764917.html 个人感觉对aop介绍的比较到位的一篇博客
+ 		http://www.importnew.com/24305.html //对spring的aop实现的一个很好的解释
+ 		https://blog.csdn.net/Winter_chen001/article/details/80537829 //springcloud 很好的记录
