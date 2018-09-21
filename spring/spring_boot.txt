@@ -1,0 +1,22 @@
+﻿spring boot 
+	简介：spring团队2014 伴随spring4.0开发的版本,javaEE一站试解决方案.
+	与云计算的天然集成
+	缺点:入门容易,精通很难
+	微服务:martin fowler,进行微服务的介绍.2014年的时候,是一种架构风格
+		一个应用,应该是一组小型服务,每一个服务都是运行在自己的进程当中,通过http的方式进行沟通.每一个功能元素最终都是可独立替换的软件单元
+		与soa进行对比
+	springboot dependpendcies  来管理控制版本,以后默认是不需要导入版本的 
+	springboot -start-web 这个依赖里面内嵌了很多的东西,包括springmvc等东西,还有tomcat
+	
+	springbootapplication, 点进去之后你会发现这其实是一个组合注解
+
+	configuretion:配置类,配置类也是容器中的一个组价
+	inport 是spring底层的注解,导入容器当中的组件
+		将主配置类 也就是 @springbootapplication 注解标注的配置的所在包的所有类进行扫描,如果将类放在springbootapplication所在的包外层的话
+		将无法扫描到
+	AutoConfigurationImportSelector 自动配置类:免去了手动编写配置和注入功能主键的工作,我们没写的配置,在这里springboot全部帮我们配置了
+	springboot -autoconfigure 下的,java2EE的一套整体的解决方案
+
+	springboot项目的创建向导spring Initializr 创建springboot项目的向导
+	
+	springboot推荐添加组件的方式,全注解的方式

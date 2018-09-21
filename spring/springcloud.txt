@@ -1,0 +1,40 @@
+什么是微服务:
+		微服务是什么:将单一应用拆分为很多小组,每一组服务都是一组进程.将业务拆分为一个一个服务,最终将各自数据库也拆分完毕.尽量降低耦合度
+		微服务的优缺点:
+			优点:足够小业务聚焦到指定的业务功能,能够被小团队进行开发
+				 服务耦合度降低
+				 能够使用不同语言开发各个模块
+				 只关注业务代码,不会和html和css组件混合
+				 每个微服务能有自己的数据库,也可以有统一的数据库
+			缺点:整个系统的复杂性大大增强了
+				 运维压力增大,
+				 数据的一致性
+				 系统集成检测成本增大
+		微服务架构的技术栈:
+			服务开发:springboot , spring , springMvc
+			服务的配置与管理:alibaba 的 Diamond
+			服务的注册:zookeeper , Eureka
+			熔断器:Hystrix
+			服务负载均衡: ribbon , nginx
+			服务监控:
+		各大IT的微服务架构:
+				alibaba : dubbo/hsf(第二代dubbo , 好舒服)
+				jd:jsf
+				新浪微博:Motan
+				当当网:dubboX
+				各个服务框架的对比 : 为毛springcloud被选出来, dubbo 5年都木有更新啦
+	
+	springcloud:
+		是什么:分布式一站式解决方案,微服务全家桶.
+		springboot 和 springcloud的区别 boot:具体到服务 , cloud具体到整合服务 . springboot 可以单独使用,不依赖cloud . 他是将boot一一个个整合并且管理起来
+		springcloud 离不开 springboot
+		dubbo 和 springcloud 的对比
+				 活跃度:springcloud > dubbo
+				 服务注册中心: dubbo: zk  , springcloud Eureka
+				调用方式:			远程RPC  , 			restAPI , 最大的不同
+				服务监控:			dubbo-monitor 		spring-boot-admin
+				断路器				无					Hystrix
+				服务网关			无					zuul
+				分布式配置			无					springcloud config
+				dubbo的定位始终是一款rpc框架,而springcloud却是微服务架构的一站式解决方案.
+				刘军说:dubbo以后会逐渐适配springcloud的生态 . 阿里云服务也在用springcloud
